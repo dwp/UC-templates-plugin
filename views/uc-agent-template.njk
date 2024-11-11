@@ -1,0 +1,84 @@
+{% from "internal-service-footer/macro.njk" import dwpFooter %}
+{% from "uc/agent-header/macro.njk" import ucAgentHeader %}
+
+{% set containerClasses = "govuk-width-container--uc" %}
+
+{% block header %}
+
+{{
+ucAgentHeader({
+    "serviceName": "Universal Credit",
+    "serviceUrl": "#",
+    "navigation": [
+    {
+        "href": "#",
+        "text": "To-do list"
+    },
+    {
+        "href": '#',
+        "text": "Claimants"
+    },
+    {
+        "href": '#',
+        "text": "Colleagues"
+    },
+    {
+        "href": '#',
+        "text": "Teams"
+    },
+    {
+        "href": '#',
+        "text": "Telephone ID check",
+        "attributes": {
+            "rel": "noopener noreferrer"
+        }
+    },
+    {
+        "href": '#',
+        "text": "Diary",
+        "opensInNewWindow": true,
+        "attributes": {
+            "rel": "noopener noreferrer"
+        }
+    }
+    ],
+    "profileName": "Joe Bloggs"
+})
+}}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">
+      UC Agent Template Plugin
+    </h1>
+
+  </div>
+</div>
+
+{% endblock %}
+
+
+{% block footer %}
+{{
+    dwpFooter({
+        containerClasses: "govuk-width-container--uc",
+        meta: {
+            visuallyHiddenTitle: "About this website",
+            items: [
+            {
+                href: "",
+                text: "Accessibility statement"
+            },
+            {
+                href: "",
+                text: "Privacy"
+            }
+            ]
+        }
+    }) 
+}}
+{% endblock %}
