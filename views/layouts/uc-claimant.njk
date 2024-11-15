@@ -1,0 +1,32 @@
+{#
+For guidance on how to use layouts see:
+https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
+#}
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+
+{% from "internal-service-footer/macro.njk" import dwpFooter %}
+{% from "uc/claimant-header/macro.njk" import ucClaimantHeader %}
+
+{% block header %}
+{{ 
+    ucClaimantHeader({
+        "serviceName": "Universal Credit",
+        "serviceUrl": "/",
+        "profileName": "Joe Bloggs",
+        "actionLabel": "Sign out"
+    })
+}}
+{% endblock %}
+
+{% block beforeContent %}
+{% if backLinkUrl %}
+    {{ 
+        govukBackLink({
+            text: "Back",
+            href: backLinkUrl
+        }) 
+    }}
+{% endif %}
+{% endblock %}
+

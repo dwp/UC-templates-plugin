@@ -1,6 +1,18 @@
 {
 	"meta": {
-		"description": "This plugin provides a basic UC Agent Template."
+		"description": "This plugin provides page templates for UC agents and claimants."
 	},
-	"nunjucksPaths": ["/views"]
+	"nunjucksPaths": ["/views"],
+	"templates": [
+    {
+      "name": "Find a claimant",
+      "path": "/views/agent/find-a-claimant.njk",
+      "type": "nunjucks"
+    },
+    {
+      "name": "Confirm your email",
+      "path": "/views/claimant/confirm-your-email.njk",
+      "type":  "nunjucks"
+    }
+	]
 }
