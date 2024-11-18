@@ -5,13 +5,23 @@
 	"nunjucksPaths": ["/views"],
 	"templates": [
     {
-      "name": "Find a claimant",
-      "path": "/views/agent/find-a-claimant.njk",
+      "name": "UC agent layout",
+      "path": "/views/layouts/uc-agent.njk",
       "type": "nunjucks"
     },
     {
       "name": "Confirm your email",
-      "path": "/views/claimant/confirm-your-email.njk",
+      "path": "/views/layouts/uc-claimant.njk",
+      "type":  "nunjucks"
+    },
+    {
+      "name": "Find a claimant",
+      "path": "/views/find-a-claimant.njk",
+      "type": "nunjucks"
+    },
+    {
+      "name": "Confirm your email",
+      "path": "/views/confirm-your-email.njk",
       "type":  "nunjucks"
     }
 	]
