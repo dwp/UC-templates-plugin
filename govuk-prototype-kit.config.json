@@ -10,18 +10,18 @@
       "type": "nunjucks"
     },
     {
-      "name": "Confirm your email",
+      "name": "UC claimant layout",
       "path": "/views/layouts/uc-claimant.njk",
       "type":  "nunjucks"
     },
     {
       "name": "Find a claimant",
-      "path": "/views/find-a-claimant.njk",
+      "path": "/views/agent/find-a-claimant.njk",
       "type": "nunjucks"
     },
     {
       "name": "Confirm your email",
-      "path": "/views/confirm-your-email.njk",
+      "path": "/views/claimant/confirm-your-email.njk",
       "type":  "nunjucks"
     }
 	]
