@@ -4,11 +4,37 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
+    <span class="govuk-caption-xl">Account details</span>
     <h1 class="govuk-heading-xl">
       Confirm your email
     </h1>
-    
+    <p>A code hasd been sent to <b>email@address.com</b>. It might take a few minutes to arrive.</p>
+    <p>Enter the code to confirm your email address.</p>
+    <p>We will never ask you for any personal information in our emails. We will only send you a link for password resets.</p>
+    {{ govukInput({
+      classes: "govuk-!-width-one-quarter",
+      label: {
+        text: "Email code",
+        classes: "govuk-label--m"
+      },
+      hint: {
+        text: "The code will expire after 15 minutes."
+      },
+      id: "email-code",
+      name: "emailCode"
+    }) }}
+    {{ govukDetails({
+      summaryText: "My code does not work",
+      text: "My code does not work"
+    }) }}
+    {{ govukDetails({
+      summaryText: "I have not received an email",
+      text: "I have not received an email"
+    }) }}
+
+    {{ govukButton({
+      text: "Continue"
+    }) }}
   </div>
 </div>
 

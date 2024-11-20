@@ -2,14 +2,52 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
     <h1 class="govuk-heading-xl">
         Find a claimant
     </h1>
-    
-  </div>
-</div>
+    {{ govukInput({
+      label: {
+        text: "Name"
+      },
+      classes: "govuk-!-width-one-half",
+      id: "name",
+      name: "name"
+    }) }}
+
+    {{ govukInput({
+      label: {
+        text: "Year of birth (optional)"
+      },
+      classes: "govuk-!-width-one-quarter",
+      id: "yob",
+      name: ""
+    }) }}
+
+    {{ govukInput({
+      label: {
+        text: "Postcode (optional)"
+      },
+      classes: "govuk-!-width-one-quarter",
+      id: "postcode",
+      name: "postcode"
+    }) }}
+    {{ govukSelect({
+      classes: "govuk-!-width-one-third",
+      id: "location",
+      name: "location",
+      label: {
+        text: "Location"
+      },
+      items: [
+        {
+          value: "all",
+          text: "All"
+        }
+      ]
+    }) }}
+      
+    {{ govukButton({
+      text: "Search"
+    }) }}
 
 {% endblock %}
