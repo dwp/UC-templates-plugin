@@ -3,7 +3,7 @@
 {% from "internal-service-footer/macro.njk" import dwpFooter %}
 {% from "uc/agent-header/macro.njk" import ucAgentHeader %}
 
-{% set containerClasses = "govuk-width-container--uc" %}
+{% set containerClasses = "dwp-govuk-width-container--uc" %}
 
 {% block header %}
 
@@ -58,7 +58,7 @@ ucAgentHeader({
 {% block footer %}
 {{
     dwpFooter({
-        containerClasses: "govuk-width-container--uc",
+        containerClasses: "dwp-govuk-width-container--uc",
         meta: {
             visuallyHiddenTitle: "About this website",
             items: [
