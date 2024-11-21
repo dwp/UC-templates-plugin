@@ -10,7 +10,8 @@
 		"govuk-prototype-kit.config.json",
 		"README.md",
 		"views",
-		"*.js"
+		"*.js",
+		"*.scss"
 	],
 	"author": {
 		"name": "DWP Design System",
