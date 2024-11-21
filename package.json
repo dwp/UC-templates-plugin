@@ -1,7 +1,7 @@
 {
-	"name": "uc-agent-template-plugin",
+	"name": "uc-templates-plugin",
 	"version": "1.0.0",
-	"description": "A basic UC agent template",
+	"description": "UC templates for the prototype kit",
 	"main": "index.js",
 	"scripts": {
 		"lint": "eslint ."
