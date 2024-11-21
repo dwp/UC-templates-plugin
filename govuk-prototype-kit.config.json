@@ -3,6 +3,9 @@
 		"description": "This plugin provides page templates for UC agents and claimants."
 	},
 	"nunjucksPaths": ["/views"],
+  "assets": [
+    "/assets/"
+  ],
 	"templates": [
     {
       "name": "UC agent layout",
