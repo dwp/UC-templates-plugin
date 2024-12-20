@@ -4,9 +4,9 @@
 {% from "uc/claimant-header/macro.njk" import ucClaimantHeader %}
 
 {% block header %}
-{{ 
+{{
     ucClaimantHeader({
-        "serviceName": "Universal Credit",
+        "serviceName": serviceName,
         "serviceUrl": "/",
         "profileName": "Joe Bloggs",
         "action": "Sign out",
@@ -16,13 +16,39 @@
 {% endblock %}
 
 {% block beforeContent %}
+{% if section %}
+    {{
+        ucClaimantNavigation({
+            "items": [
+            {
+                "href": "#",
+                "text": "Home",
+                "active": true if section === "home"
+            },
+            {
+                "href": "#",
+                "text": "To-do list",
+                "active": true if section === "todo"
+            },
+            {
+                "href": "#",
+                "text": "Journal",
+                "active": true if section === "journal"
+            }
+            ]
+        })
+    }}
+{% endif %}
+
 {% if backLinkUrl %}
-    {{ 
+    {{
         govukBackLink({
             text: "Back",
             href: backLinkUrl
-        }) 
+        })
     }}
 {% endif %}
-{% endblock %}
 
+
+
+{% endblock %}
