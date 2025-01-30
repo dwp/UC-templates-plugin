@@ -5,4 +5,10 @@
 
 .dwp-govuk-width-container--uc {
   max-width: 1410px;
+
+  @media (min-width: 40.0625em) and (max-width: 1460px) {
+          margin-right: max(30px, calc(15px + env(safe-area-inset-right)));
+          margin-left: max(30px, calc(15px + env(safe-area-inset-left)));
+  }
+
 }

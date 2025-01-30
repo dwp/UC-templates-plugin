@@ -7,8 +7,7 @@
   "pluginDependencies": [
     {
       "packageName": "@dwp/frontend",
-      "minVersion": "3.3.0",
-      "maxVersion": "*"
+      "minVersion": "3.3.0"
     }
   ],
   "templates": [
