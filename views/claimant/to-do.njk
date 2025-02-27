@@ -1,0 +1,38 @@
+{% extends "layouts/uc-claimant.njk" %}
+
+{% set section = "todo" %}
+{% set pageName ="To-do list" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l govuk-visually-hidden">To-do list</h1>
+
+      {{
+      ucActionCards({
+          "cards": [
+              {
+                  "title": "Confirm your identity",
+                  "titleUrl": "#your-identity",
+                  "description": "Finish setting up your account to keep your information secure."
+              },
+              {
+                  "title": "Prepare to meet your work coach",
+                  "titleUrl": "#meet-your-work-coach",
+                  "description": "You'll need to provide a copy of your CV."
+              },
+              {
+                  "title": "Make a payment",
+                  "titleUrl": "#make-a-payment",
+                  "alert": "Payment must be made by 20 August 2019",
+                  "description": "The total amount payable is £30.00."
+              }
+          ]
+      })
+      }}
+  </div>
+</div>
+
+{% endblock %}

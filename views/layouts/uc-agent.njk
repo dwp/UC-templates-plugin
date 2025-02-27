@@ -6,54 +6,50 @@
 {% set containerClasses = "dwp-govuk-width-container--uc" %}
 
 {% block header %}
-
 {{
-ucAgentHeader({
-    "serviceName": "Universal Credit",
-    "serviceUrl": "#",
-    "classes": 'uc-agent-header--sticky',
-    "navigation": [
-    {
-        "href": "#",
-        "text": "To-do list"
-    },
-    {
-        "href": '#',
-        "text": "Claimants"
-    },
-    {
-        "href": '#',
-        "text": "Colleagues"
-    },
-    {
-        "href": '#',
-        "text": "Teams"
-    },
-    {
-        "href": '#',
-        "text": "Telephone ID check",
-        "attributes": {
-            "rel": "noopener noreferrer"
+    ucAgentHeader({
+        "serviceName": "Universal Credit",
+        "serviceUrl": "#",
+        "classes": 'uc-agent-header--sticky',
+        "navigation": [
+        {
+            "href": "#",
+            "text": "To-do list"
+        },
+        {
+            "href": '#',
+            "text": "Claimants"
+        },
+        {
+            "href": '#',
+            "text": "Colleagues"
+        },
+        {
+            "href": '#',
+            "text": "Teams"
+        },
+        {
+            "href": '#',
+            "text": "Telephone ID check",
+            "attributes": {
+                "rel": "noopener noreferrer"
+            }
+        },
+        {
+            "href": '#',
+            "text": "Diary",
+            "opensInNewWindow": true,
+            "attributes": {
+                "rel": "noopener noreferrer"
+            }
         }
-    },
-    {
-        "href": '#',
-        "text": "Diary",
-        "opensInNewWindow": true,
-        "attributes": {
-            "rel": "noopener noreferrer"
-        }
-    }
-    ],
-    "profileName": "Joe Bloggs",
-    "action": "Sign out",
-    "actionurl": "#"
-})
+        ],
+        "profileName": "Joe Bloggs",
+        "action": "Sign out",
+        "actionUrl": "#"
+    })
 }}
 {% endblock %}
-
-
-
 
 {% block footer %}
 {{
@@ -63,15 +59,15 @@ ucAgentHeader({
             visuallyHiddenTitle: "About this website",
             items: [
             {
-                href: "",
+                href: "#",
                 text: "Accessibility statement"
             },
             {
-                href: "",
+                href: "#",
                 text: "Privacy"
             }
             ]
         }
-    }) 
+    })
 }}
 {% endblock %}

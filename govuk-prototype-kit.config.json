@@ -1,12 +1,16 @@
 {
-	"meta": {
-		"description": "This plugin provides page templates for UC agents and claimants."
-	},
-	"nunjucksPaths": ["/views"],
-  "sass": [
-    "/styles.scss"
+  "meta": {
+    "description": "This plugin provides page templates for UC agents and claimants."
+  },
+  "nunjucksPaths": ["/views"],
+  "sass": ["/styles.scss"],
+  "pluginDependencies": [
+    {
+      "packageName": "@dwp/frontend",
+      "minVersion": "3.3.0"
+    }
   ],
-	"templates": [
+  "templates": [
     {
       "name": "UC agent layout",
       "path": "/views/layouts/uc-agent.njk",
@@ -15,17 +19,27 @@
     {
       "name": "UC claimant layout",
       "path": "/views/layouts/uc-claimant.njk",
-      "type":  "nunjucks"
+      "type": "nunjucks"
     },
     {
-      "name": "Find a claimant",
+      "name": "Agent - Find a claimant",
       "path": "/views/agent/find-a-claimant.njk",
       "type": "nunjucks"
     },
     {
-      "name": "Confirm your email",
+      "name": "Citizen - Confirm your email",
       "path": "/views/claimant/confirm-your-email.njk",
-      "type":  "nunjucks"
+      "type": "nunjucks"
+    },
+    {
+      "name": "Citizen - Home screen",
+      "path": "/views/claimant/home.njk",
+      "type": "nunjucks"
+    },
+    {
+      "name": "Citizen - To-do",
+      "path": "/views/claimant/to-do.njk",
+      "type": "nunjucks"
     }
-	]
+  ]
 }

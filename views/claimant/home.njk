@@ -1,0 +1,58 @@
+{% extends "layouts/uc-claimant.njk" %}
+
+{% set section = "home" %}
+{% set pageName ="Home" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l govuk-visually-hidden">Home</h1>
+
+      <h2 class="govuk-heading-m">What happens next</h2>
+
+      <p class="govuk-body">We need to work out if you can get Universal Credit.</p>
+
+      <p class="govuk-body">Check your <strong>to-do list</strong> and <strong>journal</strong> for things you'll need to do for your claim.</p>
+
+      {{
+      ucSectionCards({
+              "cards": [
+                {
+                  "title": "Report a change",
+                  "titleUrl": "#",
+                  "description": "Tell us if your circumstances have changed. Examples include your work situation, health or relationships."
+                },
+                {
+                  "title": "Report a fit note",
+                  "titleUrl": "#",
+                  "description": "Submit your doctor's details and the dates they've put on your fit note."
+                },
+                {
+                  "title": "Make a journal entry",
+                  "titleUrl": "#",
+                  "description": "Record your activity, let us know about appointments and send or receive messages."
+                },
+                {
+                  "title": "Payments and advances",
+                  "titleUrl": "#",
+                  "description": "View your payments, apply for an advance or check how much you owe."
+                },
+                {
+                  "title": "To-do list",
+                  "titleUrl": "#",
+                  "description": "Check if we're asking you for any information."
+                },
+                {
+                  "title": "Work search",
+                  "titleUrl": "#",
+                  "description": "Guidance and tools to help you search and apply for jobs."
+                }
+              ]
+      })
+      }}
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+<section aria-label="Give us feedback">
+{% set agentFeedbackHtml %}
+<form action="#" method="post">
+    <h3 class="govuk-heading-m">Tell us what you think</h3>
+
+    <p class="govuk-body">You should include:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+        <li>what you were doing</li>
+        <li>what helped or made it difficult</li>
+        <li>the impact of this</li>
+    </ul>
+
+    <p class="govuk-body">We review feedback monthly and use it to improve the service. We will contact you if we need more information.</p>
+
+    {{
+        govukTextarea({
+            name: "agentFeedback",
+            id: "agentFeedback",
+            classes: "govuk-input--width-30",
+            label: {
+                text: "What do you want to tell us?",
+                classes: "govuk-label--m"
+            },
+            hint: {
+                text: "Tell us what you think, your feedback is appreciated"
+            }
+        })
+    }}
+
+    {{
+        govukButton({
+            text: "Send feedback"
+        })
+    }}
+</form>
+{% endset %}
+
+{{
+    govukDetails({
+        summaryText: "Give us feedback",
+        html: agentFeedbackHtml
+    })
+}}
+</section>
